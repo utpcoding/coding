@@ -1,6 +1,8 @@
-Implement Enricher
+PV Enricher
 
-The enrich method takes a data set(key value pairs) and calculate a target field based on the input, and return the total data set.
+1. Implement Enricher.
+   The enrich method takes a data set(key value pairs) and calculate a target field based on the input, and return the total data set.
+2. Also need to add some testing to test the enricher.
 
 Here is the formula:
 PV = Price / ((1 + Rate) ^ Year)
