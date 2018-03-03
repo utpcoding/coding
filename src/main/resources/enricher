@@ -1,0 +1,34 @@
+Implement Enricher
+
+The enrich method takes a data set(key value pairs) and calculate a target field based on the input, and return the total data set.
+
+Here is the formula:
+PV = Price / ((1 + Rate) ^ Year)
+
+For example, the input could be:
+{
+    Id: "A0001",
+    Rate: 0.1,
+    Year: 4,
+    Price: 100,
+    Date: "2018-03-03"
+}
+
+The enricher should calculate PV, then return:
+{
+    Id: "A0001",
+    Rate: 0.1,
+    Year: 4,
+    Price: 100,
+    Date: "2018-03-03"
+    PV: 62.0921323
+}
+
+Please note:
+1. Decimal precision is 7, rounding rule is round-up.
+   For example, if result is 62.092132311, then it should be saved as 62.0921323.
+2. Ending zeros are not needed. For example, if result is 32.0000, then it should be saved as 32.
+3. If PV cannot be calculated, just return the input.
+4. All numbers in the input data set are BigDecimal. If a number is not BigDecimal, then it's not a valid input.
+
+
